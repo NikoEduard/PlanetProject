@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background: #070724 url(../assets/background-stars.svg);
+}
+
+.upperline-neptune, .upperline-uranus, .upperline-saturn, .upperline-jupiter, .upperline-mars, .upperline-earth, .upperline-venus, .upperline-mercury {
+  position: relative;
+}
+.upperline-neptune::before, .upperline-uranus::before, .upperline-saturn::before, .upperline-jupiter::before, .upperline-mars::before, .upperline-earth::before, .upperline-venus::before, .upperline-mercury::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  width: 50px;
+  height: 4px;
+}
+
+.upperline-mercury::before {
+  background-color: #419EBB;
+}
+
+.upperline-venus::before {
+  left: -6px;
+  background-color: #EDA249;
+}
+
+.upperline-earth::before {
+  left: -6px;
+  background-color: #6D2ED5;
+}
+
+.upperline-mars::before {
+  left: -9px;
+  background-color: #D14C32;
+}
+
+.upperline-jupiter::before {
+  left: -2px;
+  background-color: #D83A34;
+}
+
+.upperline-saturn::before {
+  left: -3px;
+  background-color: #CD5120;
+}
+
+.upperline-uranus::before {
+  left: -3px;
+  background-color: #1EC1A2;
+}
+
+.upperline-neptune::before {
+  background-color: #2D68F0;
+}
+
+.bgc-mercury__active {
+  background-color: #419EBB;
+}
+
+.bgc-venus__active {
+  background-color: #EDA249;
+}
+
+.bgc-earth__active {
+  background-color: #6D2ED5;
+}
+
+.bgc-mars__active {
+  background-color: #D14C32;
+}
+
+.bgc-jupiter__active {
+  background-color: #D83A34;
+}
+
+.bgc-saturn__active {
+  background-color: #CD5120;
+}
+
+.bgc-uranus__active {
+  background-color: #1EC1A2;
+}
+
+.bgc-neptune__active {
+  background-color: #2D68F0;
+}
+
+.wrapper {
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  font-family: "League Spartan", sans-serif;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0 41px 0 32px;
+  margin-bottom: 96px;
+}
+.header h1 {
+  font-size: 28px;
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+}
+.header h1 a {
+  font-family: "League Spartan", sans-serif;
+  color: #fff;
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-list li a {
+  font-family: "League Spartan", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.nav-list li + li {
+  margin-left: 50px;
+}
+
+.main-content {
+  display: flex;
+  gap: 153px;
+  min-height: 582px;
+  align-items: center;
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.geology-img {
+  position: absolute;
+  width: 158px;
+  height: 199px;
+  top: 365px;
+}
+
+.main {
+  margin-bottom: 67px;
+}
+
+.main-info {
+  max-width: 350px;
+  margin-left: auto;
+}
+.main-info__title {
+  color: #fff;
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+.main-info__text {
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px;
+  font-family: "League Spartan", sans-serif;
+  margin-bottom: 23px;
+}
+.main-info__link {
+  color: #fff;
+  opacity: 0.5;
+  line-height: 25px;
+  font-weight: 400;
+  margin-bottom: 51px;
+}
+.main-info__link a {
+  color: #fff;
+  text-decoration: underline;
+}
+.main-info__list li + li {
+  margin-top: 16px;
+}
+.main-info__list li {
+  width: 100%;
+  height: 48px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 25px;
+  letter-spacing: 2.57px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.main-info__list li span {
+  margin: 0 28px;
+  opacity: 0.7;
+}
+.main-info__list li:hover {
+  background-color: rgba(216, 216, 216, 0.2);
+}
+
+.footer-details {
+  display: flex;
+  gap: 30px;
+}
+.footer-details__card {
+  width: 25%;
+  padding: 20px 23px 27px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.footer-details__card h4 {
+  font-size: 11px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+.footer-details__card p {
+  font-size: 40px;
+  color: #fff;
+}
+
+@media (max-width: 1120px) {
+  .main-content {
+    gap: 69px;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    max-width: 768px;
+  }
+  .container {
+    max-width: 689px;
+  }
+  .header {
+    height: 159px;
+    flex-direction: column;
+    padding: 32px 0 27px;
+    margin-bottom: 54px;
+  }
+  .upperline-mercury::before, .upperline-venus::before, .upperline-earth::before, .upperline-mars::before, .upperline-jupiter::before, .upperline-saturn::before, .upperline-uranus::before, .upperline-neptune::before {
+    top: 48px;
+  }
+  .main-content {
+    flex-direction: column;
+    gap: 37px;
+  }
+  .main-img {
+    min-height: 400px;
+  }
+  .geology-img {
+    top: 250px;
+  }
+  .main-info {
+    max-width: 100%;
+    height: 243px;
+    display: flex;
+    align-items: center;
+    gap: 69px;
+  }
+  .main-info__title {
+    font-size: 48px;
+  }
+  .main-info__text {
+    font-family: "Allerta", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+  .main-info__link {
+    margin-bottom: 0;
+  }
+  .main-info__list li {
+    font-size: 10px;
+    width: 281px;
+    height: 40px;
+  }
+  .footer-details {
+    gap: 11px;
+  }
+  .footer-details__card {
+    padding: 16px 15px 19px;
+  }
+  .footer-details__card h4 {
+    font-size: 8px;
+    line-height: 16px;
+    margin-bottom: 6px;
+  }
+  .footer-details__card p {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=styles.css.map */

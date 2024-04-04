@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+
+
+@media(max-width: 1120px) {
+   .main-content {
+      gap: 69px;
+   }
+}
+
+@media(max-width: 800px) {
+   .wrapper {
+      max-width: 768px;
+   }
+
+   .container {
+      max-width: 689px;
+   }
+
+   .header {
+      height: 159px;
+      flex-direction: column;
+      padding: 32px 0 27px;
+      margin-bottom: 54px;
+   }
+
+   %upperline {
+
+      &::before {
+         top: 48px;
+      }
+   }
+
+   .main-content {
+      flex-direction: column;
+      gap: 37px;
+   }
+
+   .main-img {
+      min-height: 400px;
+
+      &__planet {}
+   }
+
+   .geology-img {
+      top: 250px;
+   }
+
+   .main-info {
+      max-width: 100%;
+      height: 243px;
+      display: flex;
+      align-items: center;
+      gap: 69px;
+
+      &__title {
+         font-size: 48px;
+      }
+
+      &__text {
+         font-family: 'Allerta', sans-serif;
+         font-size: 11px;
+         font-weight: 500;
+         line-height: 22px;
+         margin-bottom: 32px;
+
+      }
+
+      &__link {
+         margin-bottom: 0;
+      }
+
+
+      &__list {
+
+         li {
+            font-size: 10px;
+            width: 281px;
+            height: 40px;
+         }
+      }
+   }
+
+   .footer {
+
+      &-details {
+         gap: 11px;
+
+         &__card {
+            padding: 16px 15px 19px;
+
+            h4 {
+               font-size: 8px;
+               line-height: 16px;
+               margin-bottom: 6px;
+            }
+
+            p {
+               font-size: 24px;
+            }
+         }
+      }
+
+   }
+}
