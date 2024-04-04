@@ -30,7 +30,7 @@ async function renderOverview(planetName) {
               <img
                 src="${planet.images.planet}"
                 alt=""
-                class="main-img__planet"
+                class="main-img__planet ${planetName}-img"
               />
             </article>
             <article class="main-info">
@@ -52,6 +52,7 @@ async function renderOverview(planetName) {
     mainContent.innerHTML = "";
     mainContent.insertAdjacentHTML("beforeend", planetHTML);
   }
+  window.addEventListener("resize", updateContentBasedOnWidth);
 }
 
 async function renderStructure(planetName) {
@@ -68,7 +69,7 @@ async function renderStructure(planetName) {
               <img
                 src="${planet.images.internal}"
                 alt=""
-                class="main-img__planet"
+                class="main-img__planet ${planetName}-img"
               />
             </article>
             <article class="main-info">
@@ -90,6 +91,7 @@ async function renderStructure(planetName) {
     mainContent.innerHTML = "";
     mainContent.insertAdjacentHTML("beforeend", planetHTML);
   }
+  window.addEventListener("resize", updateContentBasedOnWidth);
 }
 
 async function renderGeology(planetName) {
@@ -106,7 +108,7 @@ async function renderGeology(planetName) {
               <img
                 src="${planet.images.planet}"
                 alt=""
-                class="main-img__planet"
+                class="main-img__planet ${planetName}-img"
               />
               <img 
               src= "${planet.images.geology}"
@@ -133,6 +135,7 @@ async function renderGeology(planetName) {
     mainContent.innerHTML = "";
     mainContent.insertAdjacentHTML("beforeend", planetHTML);
   }
+  window.addEventListener("resize", updateContentBasedOnWidth);
 }
 
 async function renderPlanetDetails(planetName) {
@@ -163,6 +166,16 @@ async function renderPlanetDetails(planetName) {
     planetDetails.insertAdjacentHTML("beforeend", detailsHTML);
   }
 }
+function updateContentBasedOnWidth() {
+  const structure = document.querySelector(".structure");
+  const geology = document.querySelector(".geology");
+  const viewportWidth = window.innerWidth;
+
+  if (viewportWidth < 500) {
+    structure.innerHTML = "structure";
+    geology.innerHTML = "geology";
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   mainContent.addEventListener("click", (e) => {
@@ -180,6 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const upperline = document.querySelector(".upperline");
+
 function init() {
   switch (global.currentPage) {
     case "/":

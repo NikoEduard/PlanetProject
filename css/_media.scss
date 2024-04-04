@@ -39,6 +39,47 @@
       min-height: 400px;
 
       &__planet {}
+
+      .mercury-img {
+         width: 184px;
+         height: 184px;
+      }
+
+      .venus-img {
+         width: 253px;
+         height: 253px;
+      }
+
+      .earth-img {
+         width: 285px;
+         height: 285px;
+      }
+
+      .mars-img {
+         width: 213px;
+         height: 213px;
+      }
+
+      .jupiter-img {
+         width: 369px;
+         height: 369px;
+      }
+
+      .saturn-img {
+         width: 503px;
+         height: 503px;
+      }
+
+      .uranus-img {
+         width: 290px;
+         height: 290px;
+      }
+
+      .neptune-img {
+         width: 285px;
+         height: 285px;
+
+      }
    }
 
    .geology-img {
@@ -100,5 +141,99 @@
          }
       }
 
+   }
+}
+
+@media(max-width: 600px) {
+   .wrapper {
+      max-width: 580px;
+   }
+
+   .container {
+      max-width: 540px;
+   }
+
+   .header {
+      flex-direction: row;
+      height: 68px;
+
+      nav {
+         display: none;
+      }
+   }
+
+   .burger {
+      display: block;
+   }
+}
+
+@media(max-width: 500px) {
+   .wrapper {
+      max-width: 480px;
+   }
+
+   .container {
+      max-width: 420px;
+   }
+
+   .main-info {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+
+      &__list {
+         display: flex;
+
+         li {
+            border: none;
+            width: 33%;
+            opacity: 0.5;
+
+            span {
+               display: none;
+            }
+         }
+      }
+   }
+
+   .bgc-mercury__active {
+      background-color: transparent;
+      opacity: 1 !important;
+   }
+
+   .bgc-venus__active {
+      background-color: transparent;
+      opacity: 1 !important;
+   }
+
+   .bgc-earth__active {
+      background-color: transparent;
+      opacity: 1 !important;
+
+   }
+
+   .bgc-mars__active {
+      background-color: transparent;
+      opacity: 1 !important;
+   }
+
+   .bgc-jupiter__active {
+      background-color: transparent;
+      opacity: 1 !important;
+   }
+
+   .bgc-saturn__active {
+      background-color: transparent;
+      opacity: 1 !important;
+   }
+
+   .bgc-uranus__active {
+      background-color: transparent;
+      opacity: 1 !important;
+   }
+
+   .bgc-neptune__active {
+      background-color: transparent;
+      opacity: 1 !important;
    }
 }

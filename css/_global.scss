@@ -266,6 +266,23 @@ body {
 
 
 }
+.burger{
+   display: none;
+   width: 24px;
+   height: 17px;
+   border-top: 3px solid $w;
+   border-bottom: 3px solid $w;
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+}
 
 
 .main-content {
