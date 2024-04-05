@@ -101,6 +101,15 @@ body {
   height: 4px;
 }
 
+.neptune-circle::before, .uranus-circle::before, .saturn-circle::before, .jupiter-circle::before, .mars-circle::before, .earth-circle::before, .venus-circle::before, .mercury-circle::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  bottom: 4px;
+  border-radius: 50%;
+}
+
 .upperline-mercury::before {
   background-color: #419EBB;
 }
@@ -238,7 +247,7 @@ body {
 }
 
 .drop-menu {
-  display: block;
+  display: none;
   position: absolute;
   top: 68px;
   padding-top: 44px;
@@ -264,21 +273,51 @@ body {
   cursor: pointer;
   position: relative;
 }
-.drop-list__item::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 0;
-  bottom: 4px;
-  border-radius: 50%;
-  background-color: #fff;
-}
 .drop-list__item a {
   color: #fff;
   text-transform: uppercase;
   font-size: 15px;
   line-height: 25px;
+}
+
+.mercury-circle::before {
+  content: "";
+  background-color: #419EBB;
+}
+
+.venus-circle::before {
+  content: "";
+  background-color: #EDA249;
+}
+
+.earth-circle::before {
+  content: "";
+  background-color: #6D2ED5;
+}
+
+.mars-circle::before {
+  content: "";
+  background-color: #D14C32;
+}
+
+.jupiter-circle::before {
+  content: "";
+  background-color: #D83A34;
+}
+
+.saturn-circle::before {
+  content: "";
+  background-color: #CD5120;
+}
+
+.uranus-circle::before {
+  content: "";
+  background-color: #1EC1A2;
+}
+
+.neptune-circle::before {
+  content: "";
+  background-color: #2D68F0;
 }
 
 .main-content {

@@ -166,6 +166,19 @@ async function renderPlanetDetails(planetName) {
     planetDetails.insertAdjacentHTML("beforeend", detailsHTML);
   }
 }
+function dropMenuAppearence() {
+  const burgerBtn = document.querySelector(".burger");
+  const dropMenu = document.querySelector(".drop-menu");
+
+  burgerBtn.addEventListener("click", () => {
+    if (dropMenu.style.display === "block") {
+      dropMenu.style.display = "none";
+    } else {
+      dropMenu.style.display = "block";
+    }
+  });
+}
+dropMenuAppearence()
 function updateContentBasedOnWidth() {
   const structure = document.querySelector(".structure");
   const geology = document.querySelector(".geology");
@@ -240,4 +253,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   init();
 });
-

@@ -104,6 +104,15 @@ body {
    }
 }
 
+%drop-circle {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0;
+   bottom: 4px;
+   border-radius: 50%;
+}
+
 .upperline-mercury {
    @extend %upperline;
 
@@ -294,7 +303,7 @@ body {
 }
 
 .drop-menu {
-   display: block;
+   display: none;
    position: absolute;
    top: 68px;
    padding-top: 44px;
@@ -303,6 +312,10 @@ body {
    z-index: 10;
    background-color: #070724;
 }
+
+// .active-list {
+//    display: block;
+// }
 
 .drop-list {
    margin: 0 24px;
@@ -318,21 +331,10 @@ body {
       justify-content: space-between;
       padding-left: 45px;
       margin-bottom: 20px;
-
       cursor: pointer;
       position: relative;
 
-      &::before {
 
-         content: '';
-         position: absolute;
-         width: 20px;
-         height: 20px;
-         left: 0;
-         bottom: 4px;
-         border-radius: 50%;
-         background-color: #fff;
-      }
 
       a {
          color: $w;
@@ -341,6 +343,54 @@ body {
          line-height: 25px;
       }
    }
+}
+
+.mercury-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $mercury;
+}
+
+.venus-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $venus;
+}
+
+.earth-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $earth;
+}
+
+.mars-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $mars;
+}
+
+.jupiter-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $jupiter;
+}
+
+.saturn-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $saturn;
+}
+
+.uranus-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $uranus;
+}
+
+.neptune-circle::before {
+   content: '';
+   @extend %drop-circle;
+   background-color: $neptune;
 }
 
 
