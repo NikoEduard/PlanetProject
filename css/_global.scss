@@ -177,24 +177,31 @@ body {
 .bgc-mercury__active {
    background-color: $mercury;
 }
+
 .bgc-venus__active {
    background-color: $venus;
 }
+
 .bgc-earth__active {
    background-color: $earth;
 }
+
 .bgc-mars__active {
    background-color: $mars;
 }
+
 .bgc-jupiter__active {
    background-color: $jupiter;
 }
+
 .bgc-saturn__active {
    background-color: $saturn;
 }
+
 .bgc-uranus__active {
    background-color: $uranus;
 }
+
 .bgc-neptune__active {
    background-color: $neptune;
 }
@@ -204,7 +211,7 @@ body {
    overflow: hidden;
    margin: 0 auto;
    font-family: "League Spartan", sans-serif;
-
+   position: relative;
 }
 
 .container {
@@ -266,13 +273,15 @@ body {
 
 
 }
-.burger{
+
+.burger {
    display: none;
    width: 24px;
    height: 17px;
    border-top: 3px solid $w;
    border-bottom: 3px solid $w;
    position: relative;
+
    &::before {
       content: "";
       position: absolute;
@@ -281,6 +290,56 @@ body {
       background-color: #fff;
       top: 50%;
       transform: translateY(-50%);
+   }
+}
+
+.drop-menu {
+   display: block;
+   position: absolute;
+   top: 68px;
+   padding-top: 44px;
+   width: 100vw;
+   height: 100vh;
+   z-index: 10;
+   background-color: #070724;
+}
+
+.drop-list {
+   margin: 0 24px;
+
+   li+li {
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 45px;
+      margin-bottom: 20px;
+
+      cursor: pointer;
+      position: relative;
+
+      &::before {
+
+         content: '';
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         left: 0;
+         bottom: 4px;
+         border-radius: 50%;
+         background-color: #fff;
+      }
+
+      a {
+         color: $w;
+         text-transform: uppercase;
+         font-size: 15px;
+         line-height: 25px;
+      }
    }
 }
 

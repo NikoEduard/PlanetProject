@@ -176,6 +176,7 @@ body {
   overflow: hidden;
   margin: 0 auto;
   font-family: "League Spartan", sans-serif;
+  position: relative;
 }
 
 .container {
@@ -234,6 +235,50 @@ body {
   background-color: #fff;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.drop-menu {
+  display: block;
+  position: absolute;
+  top: 68px;
+  padding-top: 44px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: #070724;
+}
+
+.drop-list {
+  margin: 0 24px;
+}
+.drop-list li + li {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.drop-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 45px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.drop-list__item::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.drop-list__item a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .main-content {
@@ -444,7 +489,7 @@ body {
     max-width: 580px;
   }
   .container {
-    max-width: 540px;
+    max-width: 520px;
   }
   .header {
     flex-direction: row;
@@ -455,6 +500,7 @@ body {
   }
   .burger {
     display: block;
+    cursor: pointer;
   }
 }
 @media (max-width: 500px) {
@@ -462,20 +508,45 @@ body {
     max-width: 480px;
   }
   .container {
-    max-width: 420px;
+    max-width: 375px;
+  }
+  .header {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .geology-img {
+    width: calc(158px - 10%);
+    height: calc(199px - 10%);
+  }
+  .main {
+    margin-bottom: 77px;
   }
   .main-info {
     flex-direction: column;
     text-align: center;
     gap: 30px;
   }
+  .main-info__title {
+    font-size: 40px;
+  }
+  .main-info__text {
+    font-size: 11px;
+    height: 110px;
+  }
   .main-info__list {
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
+  }
+  .main-info__list li + li {
+    margin-top: 0;
   }
   .main-info__list li {
+    width: 80px;
     border: none;
-    width: 33%;
     opacity: 0.5;
+    display: flex;
+    justify-content: center;
   }
   .main-info__list li span {
     display: none;
@@ -483,6 +554,15 @@ body {
   .bgc-mercury__active {
     background-color: transparent;
     opacity: 1 !important;
+    position: relative;
+  }
+  .bgc-mercury__active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 105%;
+    background-color: #419EBB;
   }
   .bgc-venus__active {
     background-color: transparent;
@@ -511,5 +591,17 @@ body {
   .bgc-neptune__active {
     background-color: transparent;
     opacity: 1 !important;
+  }
+  .footer-details {
+    flex-direction: column;
+  }
+  .footer-details__card {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-details__card p {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -150,7 +150,7 @@
    }
 
    .container {
-      max-width: 540px;
+      max-width: 520px;
    }
 
    .header {
@@ -164,6 +164,7 @@
 
    .burger {
       display: block;
+      cursor: pointer;
    }
 }
 
@@ -173,7 +174,20 @@
    }
 
    .container {
-      max-width: 420px;
+      max-width: 375px;
+   }
+
+   .header {
+      margin-left: 24px;
+      margin-right: 24px;
+   }
+
+   .geology-img {
+      width: calc(158px - 10%);
+      height: calc(199px - 10%);
+   }
+   .main{
+      margin-bottom: 77px;
    }
 
    .main-info {
@@ -181,13 +195,31 @@
       text-align: center;
       gap: 30px;
 
+      &__title {
+         font-size: 40px;
+
+      }
+
+      &__text {
+         font-size: 11px;
+         height: 110px;
+      }
+
       &__list {
+         width: 100%;
          display: flex;
+         justify-content: space-evenly;
+
+         li+li {
+            margin-top: 0;
+         }
 
          li {
+            width: 80px;
             border: none;
-            width: 33%;
             opacity: 0.5;
+            display: flex;
+            justify-content: center;
 
             span {
                display: none;
@@ -199,6 +231,15 @@
    .bgc-mercury__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
+      &::after{
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $mercury;
+      }
    }
 
    .bgc-venus__active {
@@ -235,5 +276,20 @@
    .bgc-neptune__active {
       background-color: transparent;
       opacity: 1 !important;
+   }
+
+   .footer {
+      &-details {
+         flex-direction: column;
+         &__card{
+            width: 100%;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            p {
+               font-size: 20px;
+            }
+         }
+      }
    }
 }

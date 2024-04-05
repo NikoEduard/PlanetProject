@@ -174,26 +174,11 @@ function updateContentBasedOnWidth() {
   if (viewportWidth < 500) {
     structure.innerHTML = "structure";
     geology.innerHTML = "geology";
+  } else {
+    structure.innerHTML = "internal structure";
+    geology.innerHTML = "surface geology";
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  mainContent.addEventListener("click", (e) => {
-    if (e.target.classList.contains("overview")) {
-      console.log("overview");
-      renderOverview(planetToPass);
-    } else if (e.target.classList.contains("structure")) {
-      console.log("structure");
-      renderStructure(planetToPass);
-    } else if (e.target.classList.contains("geology")) {
-      console.log("geology");
-      renderGeology(planetToPass);
-    }
-  });
-});
-
-const upperline = document.querySelector(".upperline");
-
 function init() {
   switch (global.currentPage) {
     case "/":
@@ -240,4 +225,19 @@ function init() {
       break;
   }
 }
-init();
+document.addEventListener("DOMContentLoaded", () => {
+  mainContent.addEventListener("click", (e) => {
+    if (e.target.classList.contains("overview")) {
+      console.log("overview");
+      renderOverview(planetToPass);
+    } else if (e.target.classList.contains("structure")) {
+      console.log("structure");
+      renderStructure(planetToPass);
+    } else if (e.target.classList.contains("geology")) {
+      console.log("geology");
+      renderGeology(planetToPass);
+    }
+  });
+  init();
+});
+
