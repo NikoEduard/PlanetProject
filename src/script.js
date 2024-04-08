@@ -1,6 +1,6 @@
 "use strict";
 const global = {
-  currentPage: window.location.pathname,
+  currentPage: window.location.href,  
 };
 console.log(global.currentPage);
 const mainContent = document.querySelector(".main-content");
