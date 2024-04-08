@@ -2,6 +2,7 @@
 const global = {
   currentPage: window.location.pathname,
 };
+console.log(global.currentPage);
 const mainContent = document.querySelector(".main-content");
 const planetToPass = global.currentPage.replace("/", "").replace(".html", "");
 console.log(planetToPass);
