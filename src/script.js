@@ -1,12 +1,21 @@
 "use strict";
 const global = {
-  currentPage: window.location.href,  
+  currentPage: window.location.href,
 };
-console.log(global.currentPage);
+
 const mainContent = document.querySelector(".main-content");
-const planetToPass = global.currentPage.replace("/", "").replace(".html", "");
+const allPlanets = document.querySelectorAll(".nav-list li a");
+
+let planetToPass;
+for (let planet of allPlanets) {
+  if (planet.getAttribute("href") === "#") {
+    planetToPass = planet.textContent
+  }
+}
+
 console.log(planetToPass);
-function renderMainBtns() {}
+function renderMainBtns() { }
+
 async function dataFromJson() {
   try {
     const response = await fetch("../data.json");
@@ -18,9 +27,6 @@ async function dataFromJson() {
 }
 
 async function renderOverview(planetName) {
-  if (planetToPass === "index") {
-    planetName = "mercury";
-  }
   const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
     return planet.name.toLowerCase() === planetName.toLowerCase();
@@ -179,7 +185,7 @@ function dropMenuAppearence() {
     }
   });
 }
-dropMenuAppearence()
+dropMenuAppearence();
 function updateContentBasedOnWidth() {
   const structure = document.querySelector(".structure");
   const geology = document.querySelector(".geology");
@@ -194,45 +200,43 @@ function updateContentBasedOnWidth() {
   }
 }
 function init() {
-  switch (global.currentPage) {
-    case "/":
-    case "/index.html":
+  switch (planetToPass) {
+    case "Mercury":
       console.log(1);
-      // upperline.style.backgroundColor = '$uranus';
       renderOverview("mercury");
       renderPlanetDetails("mercury");
       break;
-    case "/venus.html":
+    case "Venus":
       console.log(2);
       renderOverview("venus");
       renderPlanetDetails("venus");
       break;
-    case "/earth.html":
+    case "Earth":
       console.log(3);
       renderOverview("earth");
       renderPlanetDetails("earth");
       break;
-    case "/mars.html":
+    case "Mars":
       console.log(4);
       renderOverview("mars");
       renderPlanetDetails("mars");
       break;
-    case "/jupiter.html":
+    case "Jupiter":
       console.log(5);
       renderOverview("jupiter");
       renderPlanetDetails("jupiter");
       break;
-    case "/saturn.html":
+    case "Saturn":
       console.log(6);
       renderOverview("saturn");
       renderPlanetDetails("saturn");
       break;
-    case "/uranus.html":
+    case "Uranus":
       console.log(7);
       renderOverview("uranus");
       renderPlanetDetails("uranus");
       break;
-    case "/neptune.html":
+    case "Neptune":
       console.log(8);
       renderOverview("neptune");
       renderPlanetDetails("neptune");
