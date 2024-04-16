@@ -186,7 +186,8 @@
       max-width: 128px;
       height: auto;
    }
-   .main{
+
+   .main {
       margin-bottom: 77px;
    }
 
@@ -232,7 +233,8 @@
       background-color: transparent;
       opacity: 1 !important;
       position: relative;
-      &::after{
+
+      &::after {
          content: '';
          position: absolute;
          width: 100%;
@@ -245,47 +247,118 @@
    .bgc-venus__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $venus;
+      }
    }
 
    .bgc-earth__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
 
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $earth;
+      }
    }
 
    .bgc-mars__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $mars;
+      }
    }
 
    .bgc-jupiter__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $jupiter;
+      }
    }
 
    .bgc-saturn__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $saturn;
+      }
    }
 
    .bgc-uranus__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $uranus;
+      }
    }
 
    .bgc-neptune__active {
       background-color: transparent;
       opacity: 1 !important;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 105%;
+         background-color: $neptune;
+      }
    }
 
    .footer {
       &-details {
          flex-direction: column;
-         &__card{
+
+         &__card {
             width: 100%;
             height: 48px;
             display: flex;
             justify-content: space-between;
+
             p {
                font-size: 20px;
             }

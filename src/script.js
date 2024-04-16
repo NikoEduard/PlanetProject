@@ -27,10 +27,10 @@ async function dataFromJson() {
 }
 
 async function renderOverview(planetName) {
-
+  const planetLC = planetName.toLowerCase()
   const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
-    return planet.name.toLowerCase() === planetName.toLowerCase();
+    return planet.name.toLowerCase() === planetLC;
   });
   if (planet) {
     let planetHTML = `
@@ -38,7 +38,7 @@ async function renderOverview(planetName) {
               <img
                 src="${planet.images.planet}"
                 alt=""
-                class="main-img__planet ${planetName.toLowerCase()}-img"
+                class="main-img__planet ${planetLC}-img"
               />
             </article>
             <article class="main-info">
@@ -51,7 +51,7 @@ async function renderOverview(planetName) {
             </div>
 
               <ul class="main-info__list">
-                <li class="overview bgc-${planetName}__active"><span>01</span>Overview</li>
+                <li class="overview bgc-${planetLC}__active"><span>01</span>Overview</li>
                 <li class="structure"><span>02</span>Internal structure</li>
                 <li class="geology"><span>03</span>Surface geology</li>
               </ul>
@@ -64,9 +64,10 @@ async function renderOverview(planetName) {
 }
 
 async function renderStructure(planetName) {
+const planetLC = planetName.toLowerCase()
   const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
-    return planet.name.toLowerCase() === planetName.toLowerCase();
+    return planet.name.toLowerCase() === planetLC;
   });
   if (planet) {
     let planetHTML = `
@@ -74,7 +75,7 @@ async function renderStructure(planetName) {
               <img
                 src="${planet.images.internal}"
                 alt=""
-                class="main-img__planet ${planetName.toLowerCase()}-img"
+                class="main-img__planet ${planetLC}-img"
               />
             </article>
             <article class="main-info">
@@ -88,7 +89,7 @@ async function renderStructure(planetName) {
 
               <ul class="main-info__list">
                 <li class="overview"><span>01</span>Overview</li>
-                <li class="structure bgc-${planetName}__active"><span>02</span>Internal structure</li>
+                <li class="structure bgc-${planetLC}__active"><span>02</span>Internal structure</li>
                 <li class="geology"><span>03</span>Surface geology</li>
               </ul>
             </article>
@@ -100,9 +101,10 @@ async function renderStructure(planetName) {
 }
 
 async function renderGeology(planetName) {
+const planetLC = planetName.toLowerCase()
    const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
-    return planet.name.toLowerCase() === planetName.toLowerCase();
+    return planet.name.toLowerCase() === planetLC;
   });
   if (planet) {
     let planetHTML = `
@@ -110,7 +112,7 @@ async function renderGeology(planetName) {
               <img
                 src="${planet.images.planet}"
                 alt=""
-                class="main-img__planet ${planetName.toLowerCase()}-img"
+                class="main-img__planet ${planetLC}-img"
               />
               <img 
               src= "${planet.images.geology}"
@@ -130,7 +132,7 @@ async function renderGeology(planetName) {
               <ul class="main-info__list">
                 <li class="overview"><span>01</span>Overview</li>
                 <li class="structure"><span>02</span>Internal structure</li>
-                <li class="geology bgc-${planetName}__active"><span>03</span>Surface geology</li>
+                <li class="geology bgc-${planetLC}__active"><span>03</span>Surface geology</li>
               </ul>
             </article>
       `;
