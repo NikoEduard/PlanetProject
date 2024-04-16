@@ -27,6 +27,7 @@ async function dataFromJson() {
 }
 
 async function renderOverview(planetName) {
+
   const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
     return planet.name.toLowerCase() === planetName.toLowerCase();
@@ -37,7 +38,7 @@ async function renderOverview(planetName) {
               <img
                 src="${planet.images.planet}"
                 alt=""
-                class="main-img__planet ${planetName}-img"
+                class="main-img__planet ${planetName.toLowerCase()}-img"
               />
             </article>
             <article class="main-info">
@@ -63,9 +64,6 @@ async function renderOverview(planetName) {
 }
 
 async function renderStructure(planetName) {
-  if (planetToPass === "index") {
-    planetName = "mercury";
-  }
   const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
     return planet.name.toLowerCase() === planetName.toLowerCase();
@@ -76,7 +74,7 @@ async function renderStructure(planetName) {
               <img
                 src="${planet.images.internal}"
                 alt=""
-                class="main-img__planet ${planetName}-img"
+                class="main-img__planet ${planetName.toLowerCase()}-img"
               />
             </article>
             <article class="main-info">
@@ -102,10 +100,7 @@ async function renderStructure(planetName) {
 }
 
 async function renderGeology(planetName) {
-  if (planetToPass === "index") {
-    planetName = "mercury";
-  }
-  const planetsData = await dataFromJson();
+   const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
     return planet.name.toLowerCase() === planetName.toLowerCase();
   });
@@ -115,7 +110,7 @@ async function renderGeology(planetName) {
               <img
                 src="${planet.images.planet}"
                 alt=""
-                class="main-img__planet ${planetName}-img"
+                class="main-img__planet ${planetName.toLowerCase()}-img"
               />
               <img 
               src= "${planet.images.geology}"

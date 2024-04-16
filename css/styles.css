@@ -469,8 +469,8 @@ body {
     height: 369px;
   }
   .main-img .saturn-img {
-    width: 503px;
-    height: 503px;
+    width: 370px;
+    height: 370px;
   }
   .main-img .uranus-img {
     width: 290px;
@@ -554,8 +554,8 @@ body {
     margin-right: 24px;
   }
   .geology-img {
-    width: calc(158px - 10%);
-    height: calc(199px - 10%);
+    max-width: 128px;
+    height: auto;
   }
   .main {
     margin-bottom: 77px;
