@@ -24,6 +24,7 @@ async function dataFromJson() {
     }
     const data = await response.json();
     return data;
+    
   } catch (err) {
     console.error(err);
   }
@@ -186,19 +187,19 @@ function dropMenuAppearence() {
   });
 }
 dropMenuAppearence();
-function updateContentBasedOnWidth() {
-  const structure = document.querySelector(".structure");
-  const geology = document.querySelector(".geology");
-  const viewportWidth = window.innerWidth;
+// function updateContentBasedOnWidth() {
+//   const structure = document.querySelector(".structure");
+//   const geology = document.querySelector(".geology");
+//   const viewportWidth = window.innerWidth;
 
-  if (viewportWidth < 500) {
-    structure.innerHTML = "structure";
-    geology.innerHTML = "geology";
-  } else {
-    structure.innerHTML = "internal structure";
-    geology.innerHTML = "surface geology";
-  }
-}
+//   if (viewportWidth < 500) {
+//     structure.innerHTML = "structure";
+//     geology.innerHTML = "geology";
+//   } else {
+//     structure.innerHTML = "internal structure";
+//     geology.innerHTML = "surface geology";
+//   }
+// }
 function init() {
   switch (planetToPass) {
     case "Mercury":
