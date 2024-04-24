@@ -64,7 +64,7 @@ async function renderOverview(planetName) {
     mainContent.innerHTML = "";
     mainContent.insertAdjacentHTML("beforeend", planetHTML);
   }
-  window.addEventListener("resize", updateContentBasedOnWidth);
+  // window.addEventListener("resize", updateContentBasedOnWidth);
 }
 
 async function renderStructure(planetName) {
@@ -101,7 +101,7 @@ const planetLC = planetName.toLowerCase()
     mainContent.innerHTML = "";
     mainContent.insertAdjacentHTML("beforeend", planetHTML);
   }
-  window.addEventListener("resize", updateContentBasedOnWidth);
+  // window.addEventListener("resize", updateContentBasedOnWidth);
 }
 
 async function renderGeology(planetName) {
@@ -143,7 +143,7 @@ const planetLC = planetName.toLowerCase()
     mainContent.innerHTML = "";
     mainContent.insertAdjacentHTML("beforeend", planetHTML);
   }
-  window.addEventListener("resize", updateContentBasedOnWidth);
+  // window.addEventListener("resize", updateContentBasedOnWidth);
 }
 
 async function renderPlanetDetails(planetName) {
