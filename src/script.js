@@ -1,7 +1,5 @@
 "use strict";
-const global = {
-  currentPage: window.location.href,
-};
+
 
 const mainContent = document.querySelector(".main-content");
 const allPlanets = document.querySelectorAll(".nav-list li a");
@@ -19,12 +17,12 @@ function renderMainBtns() { }
 async function dataFromJson() {
   try {
     const response = await fetch("../data.json");
-    if (!response.ok) { 
+    if (!response.ok) {
       throw new Error('Network response was not ok: ' + response.statusText);
     }
     const data = await response.json();
     return data;
-    
+
   } catch (err) {
     console.error(err);
   }
@@ -68,7 +66,7 @@ async function renderOverview(planetName) {
 }
 
 async function renderStructure(planetName) {
-const planetLC = planetName.toLowerCase()
+  const planetLC = planetName.toLowerCase()
   const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
     return planet.name.toLowerCase() === planetLC;
@@ -105,8 +103,8 @@ const planetLC = planetName.toLowerCase()
 }
 
 async function renderGeology(planetName) {
-const planetLC = planetName.toLowerCase()
-   const planetsData = await dataFromJson();
+  const planetLC = planetName.toLowerCase()
+  const planetsData = await dataFromJson();
   const planet = planetsData.find((planet) => {
     return planet.name.toLowerCase() === planetLC;
   });
